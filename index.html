@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,11 @@
 		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 	<nav class='navbar'>
 		<div class='navbar-center'>
-			<span class='nav-icon'>
+			<span class='nav-icon' id='menu-btn'>
 				<i class='fas fa-bars'></i>
 			</span>
 			<img src="./images/logo.png" alt='store logo' class='nav-logo' />
@@ -24,13 +26,34 @@
 			</div>
 		</div>
 	</nav>
-<header class="hero">
-	<img src="./images/background.png" alt="" class='banner-bgimg'>
-	<div class="banner">
-		<img src="./images/logo.png" alt="" class='banner-logo'>
-		<h1 class='banner-title'>MakeUp <br class='brtitle'/> & <br class='brtitle'/>Skin Care</h1>
-		<button class="banner-btn"><strong>Ver Produtos</strong></button>
+	<header class="hero">
+		<img src="./images/background.png" alt="" class='banner-bgimg'>
+		<div class="banner">
+			<img src="./images/logo.png" alt="" class='banner-logo'>
+			<h1 class='banner-title'>MakeUp <br class='brtitle' /> & <br class='brtitle' />Skin Care</h1>
+			<button class="banner-btn"><strong>Ver Produtos</strong></button>
+		</div>
+	</header>
+	<!-- Menu Section -->
+	<div class="menu-overlay">
+		<div class="menu-center">
+			<div class="menu-box">
+				<div>
+					<ul class="menu-list">
+						<li class='menu-title'>
+							<h2>MENU</h2>
+						</li>
+						<li class="menu-item"><a href="" class='menu-link'></a>Produtos</li>
+						<li class="menu-item"><a href="" class='menu-link'></a>Marcas</li>
+						<li class="menu-item"><a href="" class='menu-link'></a>Sobre a Loja</li>
+						<li class="menu-item"><a href="" class='menu-link'></a>Contato</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-</header>
+	<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+	<script src='app.js'></script>
 </body>
+
 </html>
