@@ -59,7 +59,7 @@ strong {
   display: flex;
   align-items: center;
   background: var(--clr-bg);
-  z-index: 1;
+  z-index: 10;
 }
 .navbar-center {
   width: 100%;
@@ -233,4 +233,31 @@ hr.solid {
   border-top: 3px solid #bbb;
   width: 80%;
   left: 0;
+}
+
+/* End Menu Nav */
+
+/* Brands */
+section{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.brands-logo{
+  max-width: calc(100vw- 10px);
+  align-items: center;
+}
+
+.brands_img{
+  height: 30%;
+  width: 30%;
+  margin: 1rem;
+}
+/* End Brands */
+/* Footer */
+.footer{
+  background-color: #db80df;
+  text-align: center;
+  padding: 2.5rem;
 }
