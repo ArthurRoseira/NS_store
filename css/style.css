@@ -220,6 +220,15 @@ strong {
   
 }
 
+@media only screen and (max-width: 600px) {
+ .menu-center{
+   grid-template-columns: 1fr 1fr;
+ }
+ .menu-title{
+   margin-left: 30%;
+ }
+}
+
 .menu-link{
   text-decoration: none;
   cursor: pointer;
