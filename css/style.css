@@ -50,6 +50,12 @@ body {
 strong {
   font-weight: bold;
 }
+
+
+a{
+  text-decoration: none;
+}
+
 /* NAVBAR */
 .navbar {
   position: sticky;
@@ -135,6 +141,10 @@ strong {
 }
 .banner-btn:hover {
   transform: scale(1.1);
+}
+
+.mainlink{
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -230,8 +240,7 @@ strong {
 }
 
 .menu-link{
-  text-decoration: none;
-  cursor: pointer;
+  color: black;
 }
 
 .menu-item:hover{
@@ -289,3 +298,8 @@ section{
 .social-list__link {
   font-size: var(--fs-h1);
 }
+
+
+
+
+/* Products Content */
