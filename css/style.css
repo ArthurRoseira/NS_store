@@ -303,3 +303,30 @@ section{
 
 
 /* Products Content */
+
+.products-section{
+  padding: 4rem 0;
+}
+
+
+.products-center{
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+
+.card-item{
+  border-style: solid;
+  border-color: #f3ccf567;
+  z-index: 10;
+  box-shadow: 5px 5px 5px #f3ccf567;
+  border-radius: 20px;
+}
+.product-image{
+  max-width: 50%;
+  max-height: 50%;
+}

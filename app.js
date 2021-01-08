@@ -54,5 +54,6 @@ class Products {
 
 document.addEventListener("DOMContentLoaded", () => {
   const products = new Products;
+  //metodo getProducts retorna products array
   products.getProduct().then(products => console.log(products))
 })
