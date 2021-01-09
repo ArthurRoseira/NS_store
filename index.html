@@ -12,6 +12,7 @@
 </head>
 
 <body>
+	<!-- Nav Bar -->
 	<nav class='navbar'>
 		<div class='navbar-center'>
 			<span class='nav-icon' id='menu-btn'>
@@ -23,6 +24,22 @@
 					<i class='fas fa-cart-plus'></i>
 				</span>
 				<div class="cart-items">0</div>
+			</div>
+		</div>
+		<!-- Cart Section -->
+		<div class="cart-overlay">
+			<div class="cart">
+				<span class="close-cart">
+					<i class="fas fa-window-close"></i>
+				</span>
+				<h2>Seu Pedido</h2>
+				<div class="cart-content">
+				</div>
+				<div class="cart-footer">
+					<h3>Total: $ <span class="cart-total"></span></h3>
+					<button class="clear-cart banner-btn">Limpar Carrinho</button>
+					<button class="clear-cart banner-btn">Finalizar Pedido</button>
+				</div>
 			</div>
 		</div>
 		<!-- Menu Section -->
@@ -37,7 +54,7 @@
 							<li class="menu-item"><a href="" class='menu-link'></a>Produtos</li>
 							<li class="menu-item"><a href="#brands" class='menu-link'>Marcas</a></li>
 							<li class="menu-item"><a href="" class='menu-link'></a>Sobre a Loja/Como Comprar</li>
-							<li class="menu-item"><a href="" class='menu-link'></a>Contato</li>
+							<li class="menu-item"><a href="#contato" class='menu-link'></a>Contato</li>
 						</ul>
 					</div>
 				</div>
@@ -65,7 +82,7 @@
 		</div>
 	</section>
 	<!-- Footer -->
-	<footer class="footer">
+	<footer class="footer" id='contato'>
 		<h3>Faça Seu Pedido Via WhatsApp ou Pela nossa Pagina no Instagram</h3>
 		<ul class="contact-list">
 			<li class='social-list__item'>

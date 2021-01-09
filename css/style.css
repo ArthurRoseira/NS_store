@@ -22,6 +22,7 @@
   --fs-body: 1rem;
   /* right down blur color*/
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.65);
+  --mainTransition: all 0.3s linear;
 }
 
 @media (min-width: 600px) {
@@ -78,6 +79,7 @@ a{
 }
 .nav-icon {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .cart-btn {
   position: relative;
@@ -99,6 +101,45 @@ a{
 }
 
 /* END NAVBAR */
+/* CART */
+.cart-overlay {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: rgba(230, 158, 212, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll; 
+  z-index: 20; 
+  background: rgb(231, 226, 221);
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+
 /* HEADER */
 .hero {
   min-height: calc(100vh - 60px);
@@ -300,7 +341,9 @@ section{
 }
 
 
-
+.fa{
+  overflow: visible;
+}
 
 /* Products Content */
 
@@ -314,9 +357,10 @@ section{
   margin: 0 auto;
   max-width: 1170px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
+
 }
 
 .card-item{
@@ -326,7 +370,44 @@ section{
   box-shadow: 5px 5px 5px #f3ccf567;
   border-radius: 20px;
 }
+
+.product{
+  transition: transform .2s;
+  max-height: 1fr;
+}
+.product:hover{
+  transform: scale(1.1);
+}
+
 .product-image{
-  max-width: 50%;
-  max-height: 50%;
+  margin-top: 2rem;
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.btn-item{
+  display: inline-block;
+  background: var(--clr-accent);
+  color: var(--clr-bg);
+  text-decoration: none;
+  cursor: pointer;
+  padding: .5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 1rem;
+  transition: transform 200ms ease-in-out;
+}
+
+.btn-item:hover {
+  transform: scale(1.1);
+}
+
+.item-title{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.title-div-item{
+  height: 50px;
 }

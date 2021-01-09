@@ -2,99 +2,99 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>N.S. Store Produtos</title>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-  integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
- <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N.S. Store Produtos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
- <nav class='navbar'>
-  <div class='navbar-center'>
-   <span class='nav-icon' id='menu-btn'>
-    <i class='fas fa-bars'></i>
-   </span>
-   <img src="./images/logo.png" alt='store logo' class='nav-logo' />
-   <div class='cart-btn'>
-    <span class="nav-icon">
-     <i class='fas fa-cart-plus'></i>
-    </span>
-    <div class="cart-items">0</div>
-   </div>
-  </div>
-  <!-- Menu Section -->
-  <div class="menu-overlay">
-   <div class="menu-center">
-    <div class="menu-box">
-     <div>
-      <ul class="menu-list">
-       <li class='menu-title'>
-        <h2>MENU</h2>
-       </li>
-       <li class="menu-item"><a href="" class='menu-link'></a>Produtos</li>
-       <li class="menu-item"><a href="#brands" class='menu-link'>Marcas</a></li>
-       <li class="menu-item"><a href="" class='menu-link'></a>Sobre a Loja</li>
-       <li class="menu-item"><a href="" class='menu-link'></a>Contato</li>
-      </ul>
-     </div>
+  <!-- Nav Bar -->
+  <nav class='navbar'>
+    <div class='navbar-center'>
+      <span class='nav-icon' id='menu-btn'>
+        <i class='fas fa-bars'></i>
+      </span>
+      <img src="./images/logo.png" alt='store logo' class='nav-logo' />
+      <div class='cart-btn'>
+        <span class="nav-icon">
+          <i class='fas fa-cart-plus'></i>
+        </span>
+        <div class="cart-items">0</div>
+      </div>
     </div>
-   </div>
-  </div>
- </nav>
- <!-- Content One Product Model-->
- <section class="products-section">
-  <H5>Products</H5>
-  <div class="products-center">
-   <article class="product">
-    <div class="card-item">
-     <img src="./contentful/image1.jfif" class="product-image" alt="">
-     <h3>product title</h3>
-     <h4>product price</h4>
+    <!-- Cart Section -->
+    <!-- Cart Section -->
+    <div class="cart-overlay">
+      <div class="cart">
+        <span class="close-cart">
+          <i class="fas fa-window-close"></i>
+        </span>
+        <h2>Seu Pedido</h2>
+        <div class="cart-content">
+        </div>
+        <div class="cart-footer">
+          <h3>Total: $ <span class="cart-total"></span></h3>
+          <button class="banner-btn" id='clear-cart'>Limpar Carrinho</button>
+          <button class="banner-btn" id='end-request'>Finalizar Pedido</button>
+        </div>
+      </div>
     </div>
-   </article>
-   <article class="product">
-    <div class="card-item">
-     <img src="./contentful/image3.jfif" class="product-image" alt="">
-     <h3>product title</h3>
-     <h4>product price</h4>
+    <!-- Menu Section -->
+    <div class="menu-overlay">
+      <div class="menu-center">
+        <div class="menu-box">
+          <div>
+            <ul class="menu-list">
+              <li class='menu-title'>
+                <h2>MENU</h2>
+              </li>
+              <li class="menu-item"><a href="" class='menu-link'></a>Produtos</li>
+              <li class="menu-item"><a href="#brands" class='menu-link'>Marcas</a></li>
+              <li class="menu-item"><a href="" class='menu-link'></a>Sobre a Loja</li>
+              <li class="menu-item"><a href="#contato" class='menu-link'>Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-   </article>
-   <article class="product">
-    <div class="card-item">
-     <img src="./contentful/image2.jfif" class="product-image" alt="">
-     <h3>product title</h3>
-     <h4>product price</h4>
+  </nav>
+  <!-- Content One Product Model-->
+  <section class="products-section">
+    <H2>Nossos Produtos!!</H2>
+    <div class="products-center">
     </div>
-   </article>
-  </div>
- </section>
+  </section>
 
 
 
 
- <!-- Footer -->
- <footer class="footer">
-  <h3>Faça Seu Pedido Via WhatsApp ou Pela nossa Pagina no Instagram</h3>
-  <ul class="contact-list">
-   <li class='social-list__item'>
-    <a href='' class="social-list__link">
-     <i class="fab fa-instagram-square"></i>
-    </a>
-   </li>
-   <li class='social-list__item'>
-    <a href='' class="social-list__link" id='whatsIcon'>
-     <i class="fab fa-whatsapp-square"></i>
-    </a>
-   </li>
-  </ul>
-  <h3>Faça uma Consulta!! Entregamos em todo o Brasil</h3>
-  <h4>Curitiba, PR</h4>
- </footer>
- <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
- <script src='products.js'></script>
+  <!-- Footer -->
+  <footer class="footer" id='contato'>
+    <h3>Faça Seu Pedido Via WhatsApp ou Pela nossa Pagina no Instagram</h3>
+    <ul class="contact-list">
+      <li class='social-list__item'>
+        <a href='' class="social-list__link">
+          <i class="fab fa-instagram-square"></i>
+        </a>
+      </li>
+      <li class='social-list__item'>
+        <a href='' class="social-list__link" id='whatsIcon'>
+          <i class="fab fa-whatsapp-square"></i>
+        </a>
+      </li>
+    </ul>
+    <h3>Faça uma Consulta!! Entregamos em todo o Brasil</h3>
+    <h4>Curitiba, PR</h4>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+  <script src='products.js'></script>
 </body>
 
 </html>
