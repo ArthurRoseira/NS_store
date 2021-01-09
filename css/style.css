@@ -121,7 +121,7 @@ a{
   height: 100%;
   overflow: scroll; 
   z-index: 20; 
-  background: rgb(231, 226, 221);
+  background: rgb(235, 235, 235);
   padding: 1.5rem;
   transition: var(--mainTransition);
   transform: translateX(100%);
@@ -410,4 +410,48 @@ section{
 
 .title-div-item{
   height: 50px;
+}
+
+
+.popup_item{
+  position: fixed;
+  top: calc(50% - 25vh);
+  left: calc(50% - 25vw);
+  z-index:10;
+  visibility: visible;
+  background-color: rgb(255, 255, 255);
+  height:50vh;
+  width: 50vw;
+  display: flex;
+}
+
+.onScreen {
+  visibility: visible;
+}
+.img_popup{
+  width: 50%;
+}
+
+.popup_item_image{
+  margin: 2em;
+  margin-top:3em;
+  max-width: 80%;
+}
+
+.popup_item_desc{
+  max-width: 50%;
+} 
+
+.pop_item_title{
+  margin-top: 2em;
+}
+
+.pop_item_title:after{
+  content:' ';
+  display:block;
+  border:2px solid #999898;
+  margin-right:2em;
+}
+.description_text{
+  margin-right: 3em;
 }

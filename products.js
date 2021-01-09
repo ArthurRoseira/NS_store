@@ -94,12 +94,43 @@ class UI {
           <img src='${test}' class="product-image" alt="">
           <div class="title-div-item"><h3 class='item-title'>${product.title}</h3></div>
           <h4>R$${product.price.toFixed(2)}</h4>
-          <button class="btn-item">Saiba mais</button>
+          <button class="btn-item" data-id = '${product.id}'>Saiba mais</button>
         </div>
       </article>
   `});
   // very important!! set data-id equals to product id - connect button with each product
   productDOM.innerHTML = result;
+ }
+ getItemsBtn() {
+  const buttons = [...document.querySelectorAll('.btn-item')];
+  buttonsDOM = buttons;
+  buttons.forEach(button => {
+   let id = button.dataset.id;
+   let inCart = cart.find(item => item.id === id);
+   if (inCart) {
+    button.innerText = 'In Cart';
+    button.disabled = true;
+   } else {
+    button.addEventListener('click', (event) => {
+     cartOverlay.classList.add('transparentBcg');
+     let product = Storage.getProduct(id);
+     document.body.innerHTML = document.body.innerHTML + `
+       <div class='popup_item'>
+       <div class="img_popup">
+       <img src='${product.image}' alt="" srcset="" class='popup_item_image'>
+       </div>
+       <div class="popup_item_desc">
+       <h3 class="pop_item_title">${product.title}</h3>
+       <p class='description_text'></p>
+       <h4>R$${product.price.toFixed(2)}</h4>
+       <button class='banner-btn' data-id = '${product.id}'>Adicionar</button>
+       </div>
+       </div>
+     `
+    })
+   }
+  })
+
  }
  setupAPP() {
   cartBtn.addEventListener('click', this.showCart);
@@ -150,5 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
   Storage.saveProducts(products);
  }).then(() => {
   ui.cartLogic();
+  ui.getItemsBtn();
  })
 })
