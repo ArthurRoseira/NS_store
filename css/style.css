@@ -25,6 +25,11 @@
   --mainTransition: all 0.3s linear;
 }
 
+.center_section{
+  margin-top: 5rem;
+}
+
+
 @media (min-width: 600px) {
   :root {
     --fs-h1: 4.5rem;
@@ -195,6 +200,9 @@ a{
   .brtitle {
     display: block;
   }
+  .banner-logo {
+  max-width: 40vh;
+}
 }
 
 /* End HEADER */
@@ -315,6 +323,48 @@ section{
   margin: 1rem;
 }
 /* End Brands */
+
+/* About */
+
+.card_about{
+  margin-top: 3rem;
+  margin-left: calc(50% - 25vw);
+  height:70vh;
+  width: 50vw;
+  display: flex;
+}
+
+.img_about{
+  width: 50%;
+}
+
+.text_div{
+  max-width: 50%;
+}
+.img_div{
+  max-width: 50%;
+}
+
+
+@media screen and (max-width: 800px)  {
+  .card_about{
+  margin-top: 3rem;
+  margin-left: calc(50% - 40vw);
+  height:80vh;
+  width: 90vw;
+  display: block;
+  }
+  .text_div{
+  max-width: 90%;
+  }
+  .img_div{
+    max-width: 90%;
+  }
+}
+
+
+
+
 /* Footer */
 .footer{
   background-color: #da80dfab;
@@ -418,7 +468,6 @@ section{
   top: calc(50% - 25vh);
   left: calc(50% - 25vw);
   z-index:10;
-  visibility: visible;
   background-color: rgb(255, 255, 255);
   height:50vh;
   width: 50vw;
@@ -478,6 +527,20 @@ textarea::-webkit-scrollbar-thumb {
 
 .visible{
   visibility: visible;
+}
+
+
+@media screen and (max-width: 800px)  {
+  .popup_item{
+  top: calc(50% - 25vh);
+  left: calc(50% - 25vw); 
+  z-index:10;
+  background-color: rgb(255, 255, 255);
+  height:80vh;
+  width: 60vw;
+  display: flex;
+  visibility: hidden;
+}
 }
 
 
