@@ -9,7 +9,7 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productDOM = document.querySelector('.products-center');
-
+const finishOrderBtn = document.querySelector('#end-request');
 
 let cart = [];
 let buttonsDOM = [];
@@ -174,6 +174,7 @@ class UI {
     cartBtn.addEventListener('click', this.showCart);
     closeCartBtn.addEventListener('click', this.hideCart);
     this.populateCart(cart);
+    finishOrderBtn.addEventListener('click', this.finishOrder);
   }
   populateCart(cart) {
     cart.forEach(item => this.addCartItem(item));
@@ -250,7 +251,15 @@ class UI {
       }
     })
   }
-
+  finishOrder() {
+    console.log(cart);
+    let orderMessage = 'Olá!!%20Gostaria%20de%20Realizar%20o%20Pedido%20dos%20Seguintes%20items:'
+    cart.forEach(item => {
+      orderMessage = orderMessage + `%0a${item.title} x${item.amount}`
+    })
+    window.open(
+      `https://api.whatsapp.com/send?phone=5541996880868&text=${orderMessage}`, "_blank");
+  }
 
 }
 
