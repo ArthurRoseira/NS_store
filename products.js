@@ -106,49 +106,49 @@ class UI {
     buttonsDOM = buttons;
     buttons.forEach(button => {
       let id = button.dataset.id;
-      let inCart = cart.find(item => item.id === id);
-      if (inCart) {
-        button.innerText = "No Carrinho";
-        button.disabled = true;
-      } else {
-        button.addEventListener('click', () => {
-          let product = Storage.getProduct(id);
-          cartOverlay.classList.add('transparentBcg');
-          let div = document.querySelector('.popup_item')
-          div.classList.add('visible')
-          div.innerHTML = `
-            <div class="img_popup">
-            <img src='${product.image}' alt="" srcset="" class='popup_item_image'>
-            </div>
-            <div class="popup_item_desc">
-            <div class="close-popup">
-            <i class="fas fa-window-close"></i>
-            </div>
-            <h3 class="pop_item_title">${product.title}</h3>
-            <textarea cols="50" rows="11" class='description_text'>${product.description}</textarea>
-            <h4>R$${product.price.toFixed(2)}</h4>
-            <button class='banner-btn' data-id = '${product.id}' id='addItem'><i class='fas fa-cart-plus'></i>Adicionar</button>
-            </div>
-            </div>
-          `
-          document.querySelector('.close-popup').addEventListener('click', () => {
-            document.querySelector('.popup_item').classList.remove('visible')
-            cartOverlay.classList.remove('transparentBcg');
-          })
-          document.querySelector('#addItem').addEventListener('click', (event) => {
-            document.querySelector('.popup_item').classList.remove('visible')
-            event.target.innerText = 'No Carrinho';
-            event.target.disable = true;
-            let cartItem = { ...Storage.getProduct(id), amount: 1 };
-            // destructuring and adding another field and value
-            cart = [...cart, cartItem];//kind of append
-            Storage.saveCart(cart);
-            this.setCartValues(cart);
-            this.addCartItem(cartItem);
-            this.showCart()
-          })
+      button.addEventListener('click', () => {
+        let product = Storage.getProduct(id);
+        cartOverlay.classList.add('transparentBcg');
+        let div = document.querySelector('.popup_item')
+        div.classList.add('visible')
+        div.innerHTML = `
+          <div class="img_popup">
+          <img src='${product.image}' alt="" srcset="" class='popup_item_image'>
+          </div>
+          <div class="popup_item_desc">
+          <div class="close-popup">
+          <i class="fas fa-window-close"></i>
+          </div>
+          <h3 class="pop_item_title">${product.title}</h3>
+          <textarea cols="50" rows="11" class='description_text'>${product.description}</textarea>
+          <h4>R$${product.price.toFixed(2)}</h4>
+          <button class='banner-btn' data-id = '${product.id}' id='addItem'><i class='fas fa-cart-plus'></i>Adicionar</button>
+          </div>
+          </div>
+        `
+        let inCart = cart.find(item => item.id === id);
+        if (inCart) {
+          document.querySelector('#addItem').innerText = "No Carrinho";
+          document.querySelector('#addItem').disabled = true;
+        }
+
+        document.querySelector('.close-popup').addEventListener('click', () => {
+          document.querySelector('.popup_item').classList.remove('visible')
+          cartOverlay.classList.remove('transparentBcg');
         })
-      }
+        document.querySelector('#addItem').addEventListener('click', (event) => {
+          document.querySelector('.popup_item').classList.remove('visible')
+          event.target.innerText = 'No Carrinho';
+          event.target.disable = true;
+          let cartItem = { ...Storage.getProduct(id), amount: 1 };
+          // destructuring and adding another field and value
+          cart = [...cart, cartItem];//kind of append
+          Storage.saveCart(cart);
+          this.setCartValues(cart);
+          this.addCartItem(cartItem);
+          this.showCart()
+        })
+      })
     })
   }
   addCartItem(item) {
@@ -197,9 +197,7 @@ class UI {
     cart = cart.filter(item => item.id !== id); //filter function creates a new array without the filtered element
     this.setCartValues(cart);
     Storage.saveCart(cart);
-    let button = this.getSingleButton(id);
-    button.disable = false;
-    button.innerHTML = `SAIBA MAIS`;
+
   }
   getSingleButton(id) {
     return buttonsDOM.find(button => button.dataset.id === id);
