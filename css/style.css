@@ -462,6 +462,15 @@ section{
   height: 50px;
 }
 
+@media screen and (max-width: 400px)  {
+
+  .products-center{
+    margin-right:2rem;
+  }
+
+}
+
+/* POP UP */
 
 .popup_item{
   position: fixed;

@@ -111,7 +111,7 @@ class UI {
         button.innerText = "No Carrinho";
         button.disabled = true;
       } else {
-        button.addEventListener('click', (event) => {
+        button.addEventListener('click', () => {
           let product = Storage.getProduct(id);
           cartOverlay.classList.add('transparentBcg');
           let div = document.querySelector('.popup_item')
@@ -127,7 +127,7 @@ class UI {
             <h3 class="pop_item_title">${product.title}</h3>
             <textarea cols="50" rows="11" class='description_text'>${product.description}</textarea>
             <h4>R$${product.price.toFixed(2)}</h4>
-            <button class='banner-btn' data-id = '${product.id}'><i class='fas fa-cart-plus'></i>Adicionar</button>
+            <button class='banner-btn' data-id = '${product.id}' id='addItem'><i class='fas fa-cart-plus'></i>Adicionar</button>
             </div>
             </div>
           `
@@ -135,7 +135,7 @@ class UI {
             document.querySelector('.popup_item').classList.remove('visible')
             cartOverlay.classList.remove('transparentBcg');
           })
-          document.querySelector('.close-popup').addEventListener('click', (event) => {
+          document.querySelector('#addItem').addEventListener('click', (event) => {
             document.querySelector('.popup_item').classList.remove('visible')
             event.target.innerText = 'No Carrinho';
             event.target.disable = true;
@@ -159,7 +159,7 @@ class UI {
       <div>
          <h4>${item.title}</h4>
          <h5>$${item.price}</h5>
-         <span class="remove-item" data-id=${item.id}>remove</span>
+         <span class="remove-item" data-id=${item.id}>remover</span>
       </div>
       <div>
          <i class="fas fa-chevron-up" data-id=${item.id}></i>
@@ -187,11 +187,9 @@ class UI {
     cartDOM.classList.remove('showCart');
   }
   clearCart() {//map is an array method
-    console.log(cart);
     let cartItems = cart.map(item => item.id);
     cartItems.forEach(id => this.removeItem(id));
     while (cartContent.children.length > 0) {
-      console.log(cartContent.children);
       cartContent.removeChild(cartContent.children[0]);
     }
   }
