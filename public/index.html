@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HomePage</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<!-- Nav Bar -->
+	<nav class='navbar'>
+		<div class='navbar-center'>
+			<span class='nav-icon' id='menu-btn'>
+				<i class='fas fa-bars'></i>
+			</span>
+			<img src="./images/logo.png" alt='store logo' class='nav-logo' />
+			<div class='cart-btn'>
+				<span class="nav-icon">
+					<i class='fas fa-cart-plus'></i>
+				</span>
+				<div class="cart-items">0</div>
+			</div>
+		</div>
+		<!-- Cart Section -->
+		<div class="cart-overlay">
+			<div class="cart">
+				<span class="close-cart">
+					<i class="fas fa-window-close"></i>
+				</span>
+				<h2>Seu Pedido</h2>
+				<div class="cart-content">
+				</div>
+				<div class="cart-footer">
+					<h3>Total: $ <span class="cart-total"></span></h3>
+					<button class="clear-cart banner-btn">Limpar Carrinho</button>
+					<button class="clear-cart banner-btn">Finalizar Pedido</button>
+				</div>
+			</div>
+		</div>
+		<!-- Menu Section -->
+		<div class="menu-overlay">
+			<div class="menu-center">
+				<div class="menu-box">
+					<div>
+						<ul class="menu-list">
+							<li class='menu-title'>
+								<h2>MENU</h2>
+							</li>
+							<li class="menu-item"><a href="./products.html" class='menu-link'>Produtos</a></li>
+							<li class="menu-item"><a href="#brands" class='menu-link'>Marcas</a></li>
+							<li class="menu-item"><a href="#about" class='menu-link'>Sobre a Loja/Como Comprar</a></li>
+							<li class="menu-item"><a href="#contato" class='menu-link'>Contato</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- Hero -->
+	<header class="hero">
+		<img src="./images/background.png" alt="" class='banner-bgimg'>
+		<div class="banner">
+			<img src="./images/logo.png" alt="" class='banner-logo'>
+			<h1 class='banner-title'>MakeUp <br class='brtitle' /> & <br class='brtitle' />Skin Care</h1>
+			<button class="banner-btn" id='btnProducts'><a href="./products.html" class='mainlink'><strong>Ver
+						Produtos</strong></a></button>
+		</div>
+	</header>
+	<!--  Marcas -->
+	<section id="brands">
+		<div class="brands_title">
+			<h1>Nossas Marcas</h1>
+		</div>
+		<div class="brands-logo">
+			<img src="./images/vizzela.png" alt="vizzela" class='brands_img'>
+			<img src="./images/ruby-rose-png.png" alt="ruby-rose" class='brands_img'>
+			<img src="./images/maika.png" alt="maika" class='brands_img'>
+		</div>
+	</section>
+	<!-- About -->
+	<section>
+		<div class="center_section">
+			<div class="brands_title" id='about'>
+				<h1>Sobre a Loja e Como Comprar</h1>
+			</div>
+			<div class="card_about">
+				<div class="img_div">
+					<img src="./images/whats.jpg" alt="" srcset="" class='img_about'>
+				</div>
+				<div class="text_div">
+					<h3>Seu pedido é Feito pelo WhatsApp Direto com a Gente!!</h3>
+					<p>Navegue pela nossa galeria de Produtos e adicione todos os escolhidos no carrinho. Ao
+						clicar no botão "Finalizar Pedido", você será redirecionada para a pagina do seu WhatsApp Web
+						e todos os seus pedidos estarão incluidos na mensagem!! Ao enviar a mensagem ficaremos felizes
+						em atende-lá!!
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer -->
+	<footer class="footer" id='contato'>
+		<h3>Faça Seu Pedido Via WhatsApp ou Pela nossa Pagina no Instagram</h3>
+		<ul class="contact-list">
+			<li class='social-list__item'>
+				<a href='https://www.instagram.com/ns.storemakeup/?hl=pt-br' class="social-list__link">
+					<i class="fab fa-instagram-square"></i>
+				</a>
+			</li>
+			<li class='social-list__item'>
+				<a href='' class="social-list__link" id='whatsIcon'>
+					<i class="fab fa-whatsapp-square"></i>
+				</a>
+			</li>
+		</ul>
+		<h3>Faça uma Consulta!! Entregamos em todo o Brasil</h3>
+		<h4>Curitiba, PR</h4>
+	</footer>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="/__/firebase/8.2.3/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="/__/firebase/8.2.3/firebase-analytics.js"></script>
+
+	<!-- Initialize Firebase -->
+	<script src="/__/firebase/init.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+	<script src='app.js'></script>
+</body>
+
+</html>
