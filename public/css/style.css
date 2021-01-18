@@ -217,14 +217,14 @@ a{
 
 @media only screen and (max-width: 600px) {
   .banner {
-    margin-top: 35vh;
+    margin-top: 20vh;
   }
   .brtitle {
     display: block;
   }
   .banner-logo {
-  max-width: 40vh;
-}
+    max-width: 40vh;
+  }
 }
 
 /* End HEADER */
@@ -611,7 +611,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 400px)  {
+@media screen and (max-width: 450px)  {
   .popup_item{
     top:5%;
     left: 0%;
@@ -632,7 +632,7 @@ textarea::-webkit-scrollbar-thumb {
   .popup_item_image{
   margin: 2em;
   margin-top:3em;
-  max-width: 50%;
+  max-width: 65%;
   }
 }
 
