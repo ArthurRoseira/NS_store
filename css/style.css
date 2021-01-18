@@ -137,6 +137,28 @@ a{
 .transparentBcg {
   visibility: visible;
 }
+
+.banner-btn_cart {
+  display: inline-block;
+  padding: 1em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-bg);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 1vh;
+  transition: transform 200ms ease-in-out;
+}
+.banner-btn_cart:hover {
+  transform: scale(1.1);
+}
+
+
+
 @media screen and (min-width: 768px) {
   .cart {
     width: 30vw;
