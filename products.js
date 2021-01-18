@@ -257,6 +257,7 @@ class UI {
     cart.forEach(item => {
       orderMessage = orderMessage + `%0a${item.title} x${item.amount}`
     })
+    orderMessage = orderMessage + `%0aValor Total:R$${cartTotal.innerText}`
     window.open(
       `https://api.whatsapp.com/send?phone=5541996880868&text=${orderMessage}`, "_blank");
   }
