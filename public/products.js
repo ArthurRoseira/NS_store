@@ -121,8 +121,8 @@ class UI {
           </div>
           <h3 class="pop_item_title">${product.title}</h3>
           <textarea cols="50" rows="11" class='description_text'>${product.description}</textarea>
-          <h4>R$${product.price.toFixed(2)}</h4>
-          <button class='banner-btn' data-id = '${product.id}' id='addItem'><i class='fas fa-cart-plus'></i>Adicionar</button>
+          <h4 class='popup-price'>R$${product.price.toFixed(2)}</h4>
+          <button class='banner-btn-popup' data-id = '${product.id}' id='addItem'><i class='fas fa-cart-plus'></i>Adicionar</button>
           </div>
           </div>
         `
