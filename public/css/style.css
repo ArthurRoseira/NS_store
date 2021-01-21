@@ -157,6 +157,13 @@ a{
   transform: scale(1.1);
 }
 
+.payment{
+  border-color: var(--clr-accent-light);
+  padding: 0.2em;
+  width: 200px;
+  display: block;
+  margin-bottom: 0.5em;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -441,6 +448,7 @@ section{
   z-index: 10;
   box-shadow: 5px 5px 5px #f3ccf567;
   border-radius: 20px;
+  min-height: 100%;
 }
 
 .product{
@@ -450,7 +458,9 @@ section{
 .product:hover{
   transform: scale(1.1);
 }
-
+.card-image{
+  height: 300px;
+}
 .product-image{
   margin-top: 2rem;
   max-width: 70%;
@@ -496,12 +506,12 @@ section{
 
 .popup_item{
   position: fixed;
-  top: 5%;
-  left: calc(50% - 25vw);
+  top: 10%;
+  left: calc(50% - 40vw);
   z-index:10;
   background-color: rgb(255, 255, 255);
-  height:80vh;
-  width: 50vw;
+  height:70vh;
+  width: 80vw;
   display: flex;
   visibility: hidden;
 }
@@ -534,18 +544,18 @@ section{
   margin-right:1em;
 }
 .description_text{
-  font-size: small;
+  font-size: large;
   resize: none;
   border: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 96%;
+  height:300px;
 }
 
 .close-popup{
   float: right;
-  margin-right: 1rem;
   margin-top: 1rem;
   cursor: pointer;
 }
@@ -609,7 +619,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 600px)  {
+/* @media screen and (max-width: 600px)  {
   .popup_item{
     top:5%;
     height:40%;
@@ -630,7 +640,7 @@ textarea::-webkit-scrollbar-thumb {
   margin-top:1em;
   max-width: 50%;
   }
-}
+} */
 
 
 @media screen and (max-width: 600px)  {
@@ -683,7 +693,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (min-width: 1160px) and (max-height:1080px)  {
+@media screen and (min-width: 1160px) and (min-height:912px)  {
 .popup_item{
   position: fixed;
   top: calc(50% - 40vh);
@@ -762,7 +772,7 @@ textarea::-webkit-scrollbar-thumb {
 
 
 
-@media screen and (min-width: 1160px) and (min-height: 1080px)  {
+/* @media screen and (min-width: 1160px) and (min-height: 600px) and (max-height:912px) {
 .popup_item{
   position: fixed;
   top: calc(50% - 25vh);
@@ -835,7 +845,7 @@ textarea::-webkit-scrollbar-thumb {
 .visible{
   visibility: visible;
 }
-}
+} */
 
 
 

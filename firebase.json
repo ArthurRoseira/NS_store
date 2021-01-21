@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "nsstorecuritiba",
+    "site": "nsstoremakeup",
     "public": "public",
     "ignore": [
       "firebase.json",
