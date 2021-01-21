@@ -13,7 +13,7 @@ const finishOrderBtn = document.querySelector('#end-request');
 
 let cart = [];
 let buttonsDOM = [];
-
+//firebase deploy --only hosting:nsstorecuritiba 
 
 function NewTab(message) {
   window.open(

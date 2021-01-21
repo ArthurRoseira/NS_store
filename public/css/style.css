@@ -507,11 +507,11 @@ section{
 .popup_item{
   position: fixed;
   top: 10%;
-  left: calc(50% - 40vw);
+  left: calc(50% - 33vw);
   z-index:10;
   background-color: rgb(255, 255, 255);
   height:70vh;
-  width: 80vw;
+  width: 65vw;
   display: flex;
   visibility: hidden;
 }
@@ -526,7 +526,7 @@ section{
 .popup_item_image{
   margin: 2em;
   margin-top:3em;
-  max-width: 80%;
+  max-width: 70%;
 }
 
 .popup_item_desc{
@@ -716,7 +716,7 @@ textarea::-webkit-scrollbar-thumb {
 .popup_item_image{
   margin: 1em;
   margin-top:3em;
-  max-width: 110%;
+  max-width: 90%;
 }
 
 .popup_item_desc{
