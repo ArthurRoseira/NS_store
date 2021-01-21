@@ -157,6 +157,13 @@ a{
   transform: scale(1.1);
 }
 
+.payment{
+  border-color: var(--clr-accent-light);
+  padding: 0.2em;
+  width: 200px;
+  display: block;
+  margin-bottom: 0.5em;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -441,6 +448,7 @@ section{
   z-index: 10;
   box-shadow: 5px 5px 5px #f3ccf567;
   border-radius: 20px;
+  min-height: 100%;
 }
 
 .product{
@@ -450,7 +458,9 @@ section{
 .product:hover{
   transform: scale(1.1);
 }
-
+.card-image{
+  height: 300px;
+}
 .product-image{
   margin-top: 2rem;
   max-width: 70%;

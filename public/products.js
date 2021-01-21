@@ -91,7 +91,9 @@ class UI {
       result += `
       <article class="product">
         <div class="card-item">
+          <div class="card-image">
           <img src='${test}' class="product-image" alt="">
+          </div>
           <div class="title-div-item"><h3 class='item-title'>${product.title}</h3></div>
           <h4>R$${product.price.toFixed(2)}</h4>
           <button class="btn-item" data-id = '${product.id}'>Saiba mais</button>
@@ -253,11 +255,12 @@ class UI {
   }
   finishOrder() {
     console.log(cart);
+    let payment = document.querySelector('.payment').value
     let orderMessage = 'Olá!!%20Gostaria%20de%20Realizar%20o%20Pedido%20dos%20Seguintes%20items:'
     cart.forEach(item => {
       orderMessage = orderMessage + `%0a${item.title} x${item.amount}`
     })
-    orderMessage = orderMessage + `%0aValor Total:R$${cartTotal.innerText}`
+    orderMessage = orderMessage + `%0aValor Total:R$${cartTotal.innerText}%0aPagamento: ${payment}`
     window.open(
       `https://api.whatsapp.com/send?phone=5541996880868&text=${orderMessage}`, "_blank");
   }
