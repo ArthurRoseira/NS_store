@@ -674,7 +674,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (min-width: 1160px) and (min-height:912px)  {
+@media screen and (min-width: 1160px) and (min-height:800px)  {
 .popup_item{
   position: fixed;
   top: calc(50% - 40vh);
