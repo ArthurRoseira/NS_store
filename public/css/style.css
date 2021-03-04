@@ -211,7 +211,8 @@ a{
   letter-spacing: 2px;
   font-weight: bold;
   border: none;
-  margin-bottom: 40vh;
+  margin-top: 10vh;
+  margin-bottom: 30vh;
   transition: transform 200ms ease-in-out;
 }
 .banner-btn:hover {
@@ -224,13 +225,17 @@ a{
 
 @media only screen and (max-width: 600px) {
   .banner {
-    margin-top: 20vh;
+    margin-top: 30vh;
   }
-  .brtitle {
+  /* .brtitle {
     display: block;
-  }
+  } */
   .banner-logo {
     max-width: 40vh;
+  }
+  .banner-btn{
+    margin-top: 10vh;
+    margin-bottom: 65vh;
   }
 }
 
